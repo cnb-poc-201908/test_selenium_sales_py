@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CCPTAutoTest>
+	<TestEnvironment>
+		<WebSystemURL_UAT></WebSystemURL_UAT>
+		<WebSystemURL_DEV>http://bmwpoc.cdkapps.cn:30080/</WebSystemURL_DEV>
+		<WebSystemURL_PROD>http://bmwpoc.cdkapps.cn:30080/</WebSystemURL_PROD>
+		<Databasename/>
+		<DatabasePortNumber/>
+		<DatabaseUsername/>
+		<DatabaseUserpassword/>
+		<LoginUserName>001</LoginUserName>
+		<LoginUserPasswordDes>MTEx</LoginUserPasswordDes>
+	</TestEnvironment>
+	<TestCaseExecutionConfigurations>
+		
+		<TestExecutionSuite name="touchTest" repositoryType="filenamelist">
+			<TestCaseExecutionTarget>/home/anakin/Desktop/BMWpocTest/TestData/dataDriven_sample.xlsx</TestCaseExecutionTarget>
+		</TestExecutionSuite>
+		
+		<TestExecutionSuite name="Suite_Reports_PartnersByIndustry" repositoryType="fileDirectory">
+			<TestCaseExecutionTarget>/home/anakin/Desktop/BMWpocTest/TestData/</TestCaseExecutionTarget>
+		</TestExecutionSuite>
+							
+	</TestCaseExecutionConfigurations>
+	
+	<TestCaseExecutionOutputDirectory>/home/anakin/Desktop/BMWpocTest/ExecutionOutput/</TestCaseExecutionOutputDirectory>
+</CCPTAutoTest>
