@@ -1,2 +1,2 @@
-print('hello, python. will exit(-1)')
-exit(1)
+print('hello, python. will exit(0)')
+exit()
