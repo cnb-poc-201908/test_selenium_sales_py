@@ -1,10 +1,10 @@
 '''
-Created on Jun 19, 2017
 
-@author: suiyan
+@author: IBM
 '''
 from selenium.webdriver.common.by import By
 from time import sleep
+from selenium.webdriver.support.ui import WebDriverWait
 import base64
 
 class Login(object):
@@ -24,16 +24,12 @@ class Login(object):
         self.LoginUserPassEnc=paramLoginUserPasswordEnc
         
     def UserLoginMain(self, strOutputDir=None):
+        self.Webdriverins.save_screenshot(strOutputDir + '0_beforeUsername.png')
         self.Webdriverins.find_element(*self.username_location).send_keys(self.LoginUserName)
         sleep(3)
         self.Webdriverins.find_element(*self.userpassword_location).send_keys(base64.b64decode(self.LoginUserPassEnc).decode("utf-8"))
         sleep(3)
-        self.Webdriverins.save_screenshot(strOutputDir + 'login_beforeClickSubmit.png')
         self.Webdriverins.find_element(*self.submit_location).click()
         sleep(3)
-        self.Webdriverins.save_screenshot(strOutputDir + 'login_AfterClickSubmit.png')
+        self.Webdriverins.save_screenshot(strOutputDir + '1_login_AfterClickSubmit.png')
         print('login completed.')
-        
-        
-        
-    
