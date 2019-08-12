@@ -1,4 +1,5 @@
 '''
+@author: IBM suiyandl@cn.ibm.com
 '''
 import time
 import base64
@@ -53,7 +54,6 @@ class UIOperation():
     #iterate list object and invoke UI operations.
     def IterListAndInvokeUImain(self):
         for strOneAction in self.listOperations:
-            #print(strOneAction)
             print("execute....." + strOneAction)
             self._UIOperationCustomized(strOneAction.split("|")[0],strOneAction.split("|")[1],strOneAction.split("|")[2])
         

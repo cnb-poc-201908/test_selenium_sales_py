@@ -39,7 +39,7 @@ class RuntimeWorkingDirectoryCreation(object):
         
         
 if __name__ == "__main__":
-    runIns=RuntimeWorkingDirectoryCreation("/home/anakin/Desktop/BMWpocTest/ExecutionOutput/")
+    runIns=RuntimeWorkingDirectoryCreation('/home/anakin/Desktop/BMWpocTest/ExecutionOutput/')
     runIns.CreateDirectoryByCurrentDatetime()
     print(runIns.GetRuntimeOutputDirectory())
     

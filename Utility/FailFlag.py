@@ -1,7 +1,5 @@
 '''
-Created on Jun 29, 2017
-
-@author: suiyan
+@author: IBM suiyandl@cn.ibm.com
 '''
 
 class FailFlag(object):

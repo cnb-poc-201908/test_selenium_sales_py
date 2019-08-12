@@ -1,7 +1,5 @@
 '''
-Created on Apr 17, 2017
-
-@author: suiyan
+@author: IBM suiyan@cn.ibm.com
 '''
 import xlrd
 from xlrd.book import Book

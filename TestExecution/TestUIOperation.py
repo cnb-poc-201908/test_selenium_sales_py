@@ -1,7 +1,5 @@
 '''
-Created on Apr 21, 2017
-
-@author: suiyan
+@author: IBM
 '''
 import unittest
 from selenium import webdriver

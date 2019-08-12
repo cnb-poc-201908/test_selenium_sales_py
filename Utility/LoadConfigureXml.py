@@ -1,5 +1,5 @@
 '''
-@author: suiyan
+@author: IBM suiyan@cn.ibm.com
 '''
 import xml.etree.ElementTree
 import os
