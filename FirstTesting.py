@@ -10,7 +10,7 @@ desired_capabilities={'browserName': 'chrome'}
 print("after remote webdriver")
 driver.get('https://www.bing.com')
 
-print("title is " + driver.title))
+print("title is " + driver.title)
 
 sleep(1)
 
