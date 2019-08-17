@@ -14,14 +14,14 @@
 	<TestCaseExecutionConfigurations>
 		
 		<TestExecutionSuite name="touchTest" repositoryType="filenamelist">
-			<TestCaseExecutionTarget>/home/anakin/Desktop/BMWpocTest/TestData/dataDriven_sample.xlsx</TestCaseExecutionTarget>
+			<TestCaseExecutionTarget>/TestData/dataDriven_sample.xlsx</TestCaseExecutionTarget>
 		</TestExecutionSuite>
 		
 		<TestExecutionSuite name="Suite_Reports_PartnersByIndustry" repositoryType="fileDirectory">
-			<TestCaseExecutionTarget>/home/anakin/Desktop/BMWpocTest/TestData/</TestCaseExecutionTarget>
+			<TestCaseExecutionTarget>/TestData</TestCaseExecutionTarget>
 		</TestExecutionSuite>
 							
 	</TestCaseExecutionConfigurations>
 	
-	<TestCaseExecutionOutputDirectory>/home/anakin/Desktop/BMWpocTest/ExecutionOutput/</TestCaseExecutionOutputDirectory>
+	<TestCaseExecutionOutputDirectory>/ExecutionOutput/</TestCaseExecutionOutputDirectory>
 </CCPTAutoTest>
