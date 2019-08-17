@@ -56,19 +56,19 @@ class LoadConfigureXml(object):
             #find matched suite name.
             if oneSuite.get('name').upper()==self.targetSuite.upper():
                 self.boolFindTargetSuite=True
-                
+                realParDir=os.path.abspath(os.path.dirname(os.getcwd()))
                 #if this is a directory information.
                 if oneSuite.get('repositoryType').upper()=="FILEDIRECTORY":
-                    targetDirectory=oneSuite.find("./TestCaseExecutionTarget").text
+                    targetDirectory=realParDir+oneSuite.find("./TestCaseExecutionTarget").text
                     for filename in os.listdir(targetDirectory):
                         if filename[-5:]==".xlsx":
-                            self.listTargetTestdataFile.append(targetDirectory + filename)
+                            self.listTargetTestdataFile.append(filename)
                 #in case file list specified.        
                 if oneSuite.get('repositoryType').upper()=="FILENAMELIST":
                     #get file list directly.
                     iterfileList=oneSuite.getiterator("TestCaseExecutionTarget")
                     for oneFile in iterfileList:
-                        self.listTargetTestdataFile.append(oneFile.text)
+                        self.listTargetTestdataFile.append(realParDir+oneFile.text)
         
         #get system URL and output directory from XML.
         if self.targetEnv=="UAT":
@@ -78,7 +78,7 @@ class LoadConfigureXml(object):
         else:
             self.targetURL=self.xmlHandleRoot.find("./TestEnvironment/WebSystemURL_PROD").text
         
-        self.outputMainDirectory=self.xmlHandleRoot.find("./TestCaseExecutionOutputDirectory").text
+        self.outputMainDirectory=os.getcwd()+self.xmlHandleRoot.find("./TestCaseExecutionOutputDirectory").text
         
         self.loginUsername=self.xmlHandleRoot.find("./TestEnvironment/LoginUserName").text
         self.loginUserpass=self.xmlHandleRoot.find("./TestEnvironment/LoginUserPasswordDes").text
