@@ -2,8 +2,8 @@
 <CCPTAutoTest>
 	<TestEnvironment>
 		<WebSystemURL_UAT></WebSystemURL_UAT>
-		<WebSystemURL_DEV>http://bmwpoc.cdkapps.cn:30080/</WebSystemURL_DEV>
-		<WebSystemURL_PROD>http://bmwpoc.cdkapps.cn:30080/</WebSystemURL_PROD>
+		<WebSystemURL_DEV>http://bmwpoc.cdkapps.cn:30081</WebSystemURL_DEV>
+		<WebSystemURL_PROD>http://bmwpoc.cdkapps.cn:30081</WebSystemURL_PROD>
 		<Databasename/>
 		<DatabasePortNumber/>
 		<DatabaseUsername/>
