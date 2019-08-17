@@ -44,7 +44,8 @@ class ExcelFileRead():
 
             
 if __name__ == "__main__":
-    filename = os.path.abspath(os.path.dirname(os.getcwd())) + "/TestData/dataDriven_sample.xlsx"
+    #filename = os.path.abspath(os.path.dirname(os.getcwd())) + "/TestData/dataDriven_sample.xlsx"
+    filename = os.getcwd() + "/TestData/dataDriven_sample.xlsx"
     print(filename)
     excelInstance=ExcelFileRead(filename)
     if excelInstance.open_excel()==False:
