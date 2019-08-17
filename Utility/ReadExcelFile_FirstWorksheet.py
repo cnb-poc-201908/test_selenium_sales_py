@@ -2,6 +2,7 @@
 @author: IBM suiyan@cn.ibm.com
 '''
 import xlrd
+import traceback
 from xlrd.book import Book
 
 class ExcelFileRead():
@@ -17,6 +18,7 @@ class ExcelFileRead():
             self.bookIns = xlrd.open_workbook(fileName)
             return True
         except Exception:
+            traceback.print_exc()
             print("Exception when open excel file " + fileName)
             return False
     
