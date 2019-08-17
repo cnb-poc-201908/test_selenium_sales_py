@@ -56,10 +56,10 @@ class LoadConfigureXml(object):
             #find matched suite name.
             if oneSuite.get('name').upper()==self.targetSuite.upper():
                 self.boolFindTargetSuite=True
-                realParDir=os.path.abspath(os.path.dirname(os.getcwd()))
+                realDir=os.getcwd()
                 #if this is a directory information.
                 if oneSuite.get('repositoryType').upper()=="FILEDIRECTORY":
-                    targetDirectory=realParDir+oneSuite.find("./TestCaseExecutionTarget").text
+                    targetDirectory=realDir+oneSuite.find("./TestCaseExecutionTarget").text
                     for filename in os.listdir(targetDirectory):
                         if filename[-5:]==".xlsx":
                             self.listTargetTestdataFile.append(filename)
@@ -68,7 +68,7 @@ class LoadConfigureXml(object):
                     #get file list directly.
                     iterfileList=oneSuite.getiterator("TestCaseExecutionTarget")
                     for oneFile in iterfileList:
-                        self.listTargetTestdataFile.append(realParDir+oneFile.text)
+                        self.listTargetTestdataFile.append(realDir+oneFile.text)
         
         #get system URL and output directory from XML.
         if self.targetEnv=="UAT":
