@@ -91,7 +91,9 @@ class LoadConfigureXml(object):
     
     
 if __name__ == "__main__":
-    LoadConfigureXmlIns=LoadConfigureXml(r'../Automation-Configuration.xml',"touchTest")
+    filename=os.path.abspath(os.path.dirname(os.getcwd()))+"/Automation-Configuration.xml"
+    LoadConfigureXmlIns=LoadConfigureXml(filename,"touchTest")
+    #LoadConfigureXmlIns=LoadConfigureXml(r'../Automation-Configuration.xml',"touchTest")
     LoadConfigureXmlIns.ParsexmlMain()
     print(LoadConfigureXmlIns.getlistTargetTestdataFile())
     print(LoadConfigureXmlIns.getOutputdirectory())
