@@ -87,18 +87,16 @@ class Test(unittest.TestCase):
 class TestSuiteScenario(Test):
     
     def test_Smoke(self):
-        
-        LoginIns= Login(self.firefoxWebdriver,self.UserName,self.UserPass)
-        LoginIns.UserLoginMain(self.OutputDirectory)
-        
-        #for get directory from test case file name, for 
-        strFileName=self.paramTestCaseFilenameMember
-        print('Scenario file:',strFileName)
-        strRealFileName=strFileName.split("/")[-1]
-        
-        print("execute senario : " + self.paramTestCaseFilenameMember)
-        
         try:
+            LoginIns= Login(self.firefoxWebdriver,self.UserName,self.UserPass)
+            LoginIns.UserLoginMain(self.OutputDirectory)
+        
+            #for get directory from test case file name, for 
+            strFileName=self.paramTestCaseFilenameMember
+            print('Scenario file:',strFileName)
+            strRealFileName=strFileName.split("/")[-1]
+            print("execute senario : " + self.paramTestCaseFilenameMember)
+
             readExcelIns=ExcelFileRead()
             readExcelIns.open_excel(self.paramTestCaseFilenameMember)
             UIoperationIns=UIOperation(readExcelIns.read_FirstWorksheet(),self.firefoxWebdriver,self.OutputDirectory, strFileName[0:len(strFileName)-len(strRealFileName)])
@@ -131,7 +129,7 @@ if __name__ == "__main__":
     
     #corresponding suite name not found, exit -1
     if LoadConfigureXmlIns.ParsexmlMain()==False:
-        exit
+        exit(-1)
     
     ffIns=FailFlag()
 
@@ -151,24 +149,17 @@ if __name__ == "__main__":
         sys.exit(-1)
 
     '''''
+    #output to html begin *******************
     strTimeStap=str(datetime.datetime.now())
     strTimeStap=strTimeStap[:len(strTimeStap)-7]
     strTimeStap=strTimeStap.replace('-', '')
     strTimeStap=strTimeStap.replace(' ', '')
     strTimeStap=strTimeStap.replace(':', '')
-    strHtmlReportFileName='c:\\' + strTimeStap + '.html'
+    strHtmlReportFileName=os.getcwd() + '/ExecutionOutput/testReport.html'
     fp=open(strHtmlReportFileName,'wb')
     runner=HTMLTestRunner(stream=fp)
     runner.run(suite)
     fp.close()
-    print("Refer to the html report file for result: "  + "c:\\" + strTimeStap + ".html")
-
-
-    suite=unittest.TestSuite()
-    suite.addTest(Test("testThisone"))
-    fp=open('c:\\abcdefg.html','wb')
-    runner=HTMLTestRunner(stream=fp)
-    #runner=unittest.TextTestRunner()
-    runner.run(suite)
-    fp.close()
+    print("\nRefer to the html report file for result: "  + strHtmlReportFileName)
+    #output to html end *******************
     '''''
