@@ -68,7 +68,7 @@ class Test(unittest.TestCase):
         runtimeWorkingDirIns=RuntimeWorkingDirectoryCreation(self.paramOutputDirMember,self.paramTestCaseFilenameMember)
         runtimeWorkingDirIns.CreateDirectoryByCurrentDatetime()
         self.OutputDirectory=runtimeWorkingDirIns.GetRuntimeOutputDirectory()
-        self.firefoxWebdriver=webdriver.Remote(command_executor='http://172.17.0.2:4444/wd/hub',desired_capabilities={'browserName': 'chrome'})
+        self.firefoxWebdriver=webdriver.Remote(command_executor='http://10.244.2.34:5555/wd/hub',desired_capabilities={'browserName': 'chrome'})
         #print('anakin here')
         #self.firefoxWebdriver=webdriver.Chrome()
         self.firefoxWebdriver.get(self.paramURLMember)
