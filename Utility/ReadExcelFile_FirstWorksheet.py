@@ -3,6 +3,7 @@
 '''
 import xlrd
 import traceback
+import os
 from xlrd.book import Book
 
 class ExcelFileRead():
@@ -43,7 +44,9 @@ class ExcelFileRead():
 
             
 if __name__ == "__main__":
-    excelInstance=ExcelFileRead()
+    filename = os.path.abspath(os.path.dirname(os.getcwd())) + "/TestData/dataDriven_sample.xlsx"
+    print(filename)
+    excelInstance=ExcelFileRead(filename)
     if excelInstance.open_excel()==False:
         print("error happened.")
     else:
