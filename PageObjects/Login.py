@@ -25,11 +25,11 @@ class Login(object):
         
     def UserLoginMain(self, strOutputDir=None):
         self.Webdriverins.save_screenshot(strOutputDir + '0_beforeUsername.png')
-        self.Webdriverins.find_element(*self.username_location).send_keys(self.LoginUserName)
-        sleep(3)
-        self.Webdriverins.find_element(*self.userpassword_location).send_keys(base64.b64decode(self.LoginUserPassEnc).decode("utf-8"))
-        sleep(3)
-        self.Webdriverins.find_element(*self.submit_location).click()
-        sleep(3)
-        self.Webdriverins.save_screenshot(strOutputDir + '1_login_AfterClickSubmit.png')
+        #self.Webdriverins.find_element(*self.username_location).send_keys(self.LoginUserName)
+        #sleep(3)
+        #self.Webdriverins.find_element(*self.userpassword_location).send_keys(base64.b64decode(self.LoginUserPassEnc).decode("utf-8"))
+        #sleep(3)
+        #self.Webdriverins.find_element(*self.submit_location).click()
+        #sleep(3)
+        #self.Webdriverins.save_screenshot(strOutputDir + '1_login_AfterClickSubmit.png')
         print('login completed.')
