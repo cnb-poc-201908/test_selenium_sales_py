@@ -17,7 +17,7 @@
 			<TestCaseExecutionTarget>/TestData/dataDriven_sample.xlsx</TestCaseExecutionTarget>
 		</TestExecutionSuite>
 		
-		<TestExecutionSuite name="Suite_test1" repositoryType="fileDirectory">
+		<TestExecutionSuite name="touchTest2" repositoryType="fileDirectory">
 			<TestCaseExecutionTarget>/TestData</TestCaseExecutionTarget>
 		</TestExecutionSuite>
 							
