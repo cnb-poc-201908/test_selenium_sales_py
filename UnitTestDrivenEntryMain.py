@@ -88,14 +88,14 @@ class TestSuiteScenario(Test):
     
     def test_Smoke(self):
         try:
-            LoginIns= Login(self.firefoxWebdriver,self.UserName,self.UserPass)
-            LoginIns.UserLoginMain(self.OutputDirectory)
+            #LoginIns= Login(self.firefoxWebdriver,self.UserName,self.UserPass)
+            #LoginIns.UserLoginMain(self.OutputDirectory)
         
             #for get directory from test case file name, for 
             strFileName=self.paramTestCaseFilenameMember
             print('Scenario file:',strFileName)
             strRealFileName=strFileName.split("/")[-1]
-            print("execute senario : " + self.paramTestCaseFilenameMember)
+            #print("execute senario : " + self.paramTestCaseFilenameMember)
 
             readExcelIns=ExcelFileRead()
             readExcelIns.open_excel(self.paramTestCaseFilenameMember)
