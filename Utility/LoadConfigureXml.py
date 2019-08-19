@@ -69,6 +69,7 @@ class LoadConfigureXml(object):
                     iterfileList=realDir + oneSuite.getiterator("TestCaseExecutionTarget")
                     ss="\\"
                     for oneFile in iterfileList:
+                        print("anakin mark:"+ iterfileList + ss + oneFile.text)
                         self.listTargetTestdataFile.append(iterfileList + ss + oneFile.text)
         
         #get system URL and output directory from XML.
