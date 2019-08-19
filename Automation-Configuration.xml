@@ -17,8 +17,13 @@
 			<TestCaseExecutionTarget>/TestData/dataDriven_sample.xlsx</TestCaseExecutionTarget>
 		</TestExecutionSuite>
 		
-		<TestExecutionSuite name="touchTest2" repositoryType="fileDirectory">
-			<TestCaseExecutionTarget>/TestData</TestCaseExecutionTarget>
+		<TestExecutionSuite name="touchTest2" repositoryType="filenamelist">
+			<TestCaseExecutionTarget>/TestData/SmokeTest.xlsx</TestCaseExecutionTarget>
+			<TestCaseExecutionTarget>/TestData/SmokeTest2.xlsx</TestCaseExecutionTarget>
+		</TestExecutionSuite>
+
+		<TestExecutionSuite name="touchTest3" repositoryType="fileDirectory">
+			<TestCaseExecutionTarget>/TestData/</TestCaseExecutionTarget>
 		</TestExecutionSuite>
 							
 	</TestCaseExecutionConfigurations>

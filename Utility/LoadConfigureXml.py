@@ -66,11 +66,9 @@ class LoadConfigureXml(object):
                 #in case file list specified.        
                 if oneSuite.get('repositoryType').upper()=="FILENAMELIST":
                     #get file list directly.
-                    iterfileList=realDir + oneSuite.getiterator("TestCaseExecutionTarget")
-                    ss="\\"
+                    iterfileList=oneSuite.getiterator("TestCaseExecutionTarget")
                     for oneFile in iterfileList:
-                        print("anakin mark:"+ iterfileList + ss + oneFile.text)
-                        self.listTargetTestdataFile.append(iterfileList + ss + oneFile.text)
+                        self.listTargetTestdataFile.append(oneFile.text)
         
         #get system URL and output directory from XML.
         if self.targetEnv=="UAT":
