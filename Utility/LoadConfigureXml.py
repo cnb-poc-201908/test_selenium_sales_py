@@ -68,7 +68,7 @@ class LoadConfigureXml(object):
                     #get file list directly.
                     iterfileList=realDir + oneSuite.getiterator("TestCaseExecutionTarget")
                     for oneFile in iterfileList:
-                        self.listTargetTestdataFile.append(oneFile.text)
+                        self.listTargetTestdataFile.append(iterfileList + "\" + oneFile.text)
         
         #get system URL and output directory from XML.
         if self.targetEnv=="UAT":
